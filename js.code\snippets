@@ -1,0 +1,65 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"setAttribute in Event handler" : {
+		"scope": "javascript,html,svg",
+		"prefix": "attr",
+		"body": [
+			"evt.target.setAttribute('$1', '$2');"
+		],
+		"description": "setAttribute in event handler on node where event occured"
+	},
+
+	"query DOM node by ID" : {
+		"scope": "javascript,html,svg",
+		"prefix": ["find","query"],
+		"body": [
+			"document.querySelector('#$1');"
+		],
+		"description": "find/query DOM node by ID"
+	},
+
+	"map array to other array" : {
+		"scope": "javascript,html,svg",
+		"prefix": ["map","arr"],
+		"body": [
+			".map( (item,idx,ar)=>{",
+				"	if (!ar) ar = [];",
+				"	if (idx==0) ar.push(item);",
+				"	return ar; } );"
+		],
+		"description": "find/query DOM node by ID"
+	},
+
+	"test if method or property undefined" : {
+		"scope": "javascript,html,svg",
+		"prefix": "ifun",
+		"body": [ "if (typeof #$1 !== 'undefined') {",
+			" }"],
+		"description": "test if method or property undefined"
+	},
+
+	"test if object has function" : {
+		"scope": "javascript,html,svg",
+		"prefix": "ifun",
+		"body": [ "if (typeof #$1 === 'function') {",
+			" }"],
+		"description": "test if object has function"
+	}
+
+}
